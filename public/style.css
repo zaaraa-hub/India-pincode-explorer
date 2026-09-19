@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 
-:root {
+
+  :root {
   --bg: #f6f1e8;
   --card: #fffdf8;
   --ink: #24211d;
@@ -10,7 +11,10 @@
   --gold: #8a6d1f;
   --soft: #eee6d8;
   --green: #607d5b;
+  --teal: #607d5b;
+  --danger: #c1552f;
 }
+
 
 * {
   box-sizing: border-box;
@@ -416,4 +420,63 @@ footer {
   .meta-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+/* JAVASCRIPT SHOW/HIDE STATES */
+
+.card.show {
+  display: block;
+}
+
+.loading.show {
+  display: flex;
+}
+
+.route-line {
+  display: none;
+}
+
+.route-line.show {
+  display: flex;
+}
+
+.banner {
+  display: none;
+}
+
+.banner.show {
+  display: block;
+}
+
+/* SEARCH CHIPS */
+
+.chip {
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: white;
+  color: var(--muted);
+  cursor: pointer;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+}
+
+.chip:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.nearby-chip,
+.alt-chip {
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: white;
+  cursor: pointer;
+  font-size: 11px;
+}
+
+.nearby-chip:hover,
+.alt-chip:hover {
+  border-color: var(--accent);
+  color: var(--accent);
 }

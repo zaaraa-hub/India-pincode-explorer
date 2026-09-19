@@ -185,7 +185,7 @@ app.get('/api/health', (req, res) => {
   res.json({ ok: true, aiEnabled: Boolean(ANTHROPIC_API_KEY) });
 });
 
-app.listen(PORT, () => {
-  console.log(`India Pincode Explorer running on http://localhost:${PORT}`);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`India Pincode Explorer running on port ${PORT}`);
   console.log(`AI insights: ${ANTHROPIC_API_KEY ? 'enabled' : 'disabled (set ANTHROPIC_API_KEY in .env to enable)'}`);
 });
